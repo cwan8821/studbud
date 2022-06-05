@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="scss/main.scss">
+    <title>StudBud</title>
+  </head>
+  <body>
+    
+  <!--Nav Bar-->
+  <div id="mySidenav" class="sidenav">
+    <img src="images/studbud-logo.png">
+    <div class="navLink" id="navlink-img-top">
+      <img src="images/kanban-s.png">
+      <a href="../public/index.html">Kanban Board</a>
+    </div>
+    <div class="navLink" id="navlink-img">
+      <img src="images/reading.png">
+      <a href="../public/resources.html">Reading List</a>
+    </div>
+    <div class="navLink" id="navlink-img">
+      <img src="images/timer.png">
+      <a href="#pomodoro">Pomodoro Timer</a>
+    </div>
+    <div class="navLink" id="navlink-img">
+      <img src="images/timer.png">
+      <a href="#stopwatch">Stopwatch</a>
+    </div>
+  </div>
+    
+  <div id="main-container" class="main">
+    <!--Header-->
+    <div class="header">
+      <div class="headingOne">
+        <h1>Hello!</h1>
+      </div>
+      <div class="newButtons">
+        <button type="button" id="newTask" data-modal-target="#modal-newTask">New Task +</button>
+        <button type="button" id="newBoard">New Board +</button>
+      </div>
+    </div>
+    <!--Kanban Board-->
+    <div class="kanbanBoard">
+      <div class="kanbanBlock" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">To Do
+        <div class="task" id="task-1" draggable="true" ondragstart="drag(event)">
+          <div class="taskCard" id="taskCard-top">
+            <!--link edit button-->
+          </div>
+          <div class="taskCard" id="taskCard-middle">
+            <h4>French Beginners</h4>
+            <p>Learn accents and pronounciation.</p>
+          </div>
+          <div class="taskCard" id="taskCard-bottom">
+            <div class="cardDetails" id="dueDate">
+              <img src="images/calender.png">
+              <p>15 Apr</p>
+            </div>
+            <div class="cardDetails" id="duration">
+              <img src="images/duration.png">
+              <p>1hr 15min</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="kanbanBlock" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">In Progress</div>
+      <div class="kanbanBlock" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">Done</div>
+    </div>
+
+    <!--Create New Task-->
+    <form id = "taskform">
+    <div class="modal" id="modal-newTask">
+      <div class="modalHeader" id="newTask-header">
+          <h3>Create New Task</h3>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modalBody" id="newTask-body">
+        <div id="newTask-left">
+          <!--Task description-->
+          <label for="taskName"> Task Name: </label>
+          <input type="text" id="taskNameInput" name="taskName" required>
+
+          <label for="taskDescription">Description:</label>
+          <input type="text" id="taskDescriptionInput" name="taskDescription">
+          
+          <label for="subject">Subject:</label>
+          <select id="subjectInput" name="subject">
+            <option value=" ">Select one: </option>
+            <option value="french">French </option>
+            <option value="spanish">Spanish</option>
+          </select>
+          
+          <!--Status Input-->
+          <label for="status">Status:</label>
+          <select id="statusInput" name="status">
+            <option value=" ">Select One:</option>
+            <option value="to-do">To Do </option>
+            <option value="doing">In progress </option>
+            <option value="done">Completed </option>
+          </select>
+        </div>
+        <div id="newTask-right">
+          <!--Priority Input-->
+          <label for="priority">Priority:</label>
+          <select id="priorityInput" name="priority">
+            <option value=" ">Select One:</option>
+            <option value="Low">Low </option>
+            <option value="Medium">Medium </option>
+            <option value="High">High </option>
+          </select>
+          
+          <!---Date Input-->
+          <label for="dueDate">Due Date:</label>
+          <input type="date" id="dueDateInput" name="dueDate" required>
+          
+          <!--Time Input-->
+          <label for="duration">Duration:</label>
+          <input type="time" id="durationInput" name="duration" required>
+        </div>
+        </div>
+
+          <input type="submit" value="Create Task">
+        </form>
+
+        <div class="timers-container">
+          <div class="timer" id="pomodoro">
+            <div class="timerDisplay">
+            <h3>Pomodoro Timer</h3>
+            <h4>Work Period</h4>
+            00:00
+            <h4>Break Period</h4>
+            00:00
+            
+            <div class="pomTimeline">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <button id="timerStart">Start</button>
+            </div>
+  
+          </div>
+          <div class="timer" id="stopwatch">
+            <div class="stopwatchDisplay">
+              <h3>Stopwatch</h3>
+              00:00:00
+              <div class="stopwatchButtons">
+                <button id="stopwatchPause">Pause</button>
+                <button id="stopwatchStart">Start</button>
+                <button id="stopwatchReset">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div id="overlay"></div>
+
+<!--MUSIC PLAYER NEW-->
+<audio src=" " id="audio"></audio>
+
+<div class="music-player">
+  <div class="disk"></div>
+  <h1 class="song-name">song one</h1>
+  <p class="artist-name">artist</p>
+
+  <div class="song-slider">
+    <input type="range" value="0" class="seek-bar">
+    <span class="current-time">00:00</span>
+    <span class="song-duration">00:00</span>
+  </div>
+  <div class="controls">
+    <button class="btn prev-btn"><img src="images/prevbtn.png">
+    <button class="play-btn pause">
+      <span></span>
+      <span></span>
+      <button class="btn next-btn"><img src="images/nextbtn.png">
+  </button>
+  </div>
+
+
+</div>
+</div>
+
+
+      <script src="script.js"></script>
+      <script src="kanban.js"></script>
+      <script src="timer.js"></script>
+      <script src="song-files.js"></script>
+      <script src="musicplayer.js"></script>
+      
+  </body>
+</html>

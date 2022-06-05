@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="scss/main.scss">
+    <title>StudBud</title>
+  </head>
+  <body>
+    <!--Nav Bar-->
+    <div id="mySidenav" class="sidenav">
+        <img src="images/studbud-logo.png">
+        <div class="navLink" id="navlink-img-top">
+          <img src="images/kanban-s.png">
+          <a href="../public/index.html">Kanban Board</a>
+        </div>
+        <div class="navLink" id="navlink-img">
+          <img src="images/reading.png">
+          <a href="../public/resources.html">Reading List</a>
+        </div>
+        <div class="navLink" id="navlink-img">
+          <img src="images/timer.png">
+          <button type="button" class="timer-buttons" id="pomodoro">Pomodoro Timer</button>
+        </div>
+        <div class="navLink" id="navlink-img">
+          <img src="images/timer.png">
+          <button type="button" class="timer-buttons" data-modal-targets="#stopwatch">Stopwatch</button>
+        </div>
+      </div>
+    
+    
+    
+    <div id="main-container" class="main">
+        <!--Header-->
+        <div class="header">
+          <div class="filter-container">
+           <img src="images/filter.png">
+           <h4>Filter Search</h4>   
+          </div>
+        </div>
+    <div class="resource-group" id="group-one">
+            <div class="group-header">
+                <h3>French Basics</h3>
+                <a href="../public/references.html">
+                    <img src="images/share.png">
+                </a>
+            </div>
+            <div class="contentCard">
+                <div class="card-top">
+                    <h4>French Beginners</h4>
+                    <p>Learn accents and pronounciation.</p>
+                </div>
+                <div class="card-bottom">
+                    <a href="https://www.w3schools.com/howto/howto_css_modals.asp">Link</a>
+                    <a href=" ">
+                        <img src="images/link.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Create New Card Form-->
+        <form id="cardForm">
+        <div class="form-container">
+            <div class="newCard-form">
+                <h3>Create New Task</h3>
+
+                <label for="taskName"> Title: </label>
+                <input type="text" id="taskNameInput" name="taskName" required>
+
+                <label for="taskDescription">Description:</label>
+                <input type="text" id="taskDescriptionInput" name="taskDescription">
+
+                <label for="link">Add Link</label>
+                <input type="text" id="referenceLink" name="link" required>
+
+                <label for="subject">Group:</label>
+                    <select id="subjectInput" name="subject">
+                        <option value=" ">Select one: </option>
+                        <option value="french">French </option>
+                        <option value="spanish">Spanish</option>
+                    </select>
+                
+                <input type="submit" value="Create Task">
+            </div>
+        </div>
+        </form>
+
+        <!--New Reference Card-->
+        <main class="content">
+
+        </main>
+
+        </div>
+        </div>
+        
+
+
+        <script src="resources.js"></script>
+  </body>
+</html>
