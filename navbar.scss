@@ -1,0 +1,73 @@
+.sidenav{
+    height: 100%;
+    width: 130px;
+    position: fixed;
+    padding: 60px;
+    border-right: 1px white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 0px 5px 3px rgb(244, 244, 244);
+    margin-top: -30px;
+
+}
+
+.sidenav a{
+    text-decoration: none;
+    display: block;
+    color: black;
+    min-width: 200px;
+    margin-left: 15px;
+}
+
+.sidenav a:hover{
+    font-weight: 500;
+}
+
+.sidenav img{
+    max-width: 60%;
+    margin-left: -20px;
+}
+
+.navLink{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#navlink-img{
+    max-width: 40%;
+    margin-right: 20px;
+}
+
+#navlink-img-top{
+    max-width: 40%;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+
+/*header css*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header button{
+    position: fixed right;
+    margin: 0px 20px;
+    padding: 12px 24px;
+    border: solid 1px white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 2px rgb(244, 244, 244);
+    background-color: white;
+    font-family: 'Montserrat', 'Sans';
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+.header button:nth-child(2){
+    margin-left: 20px;
+    margin-right: 0px;
+}
