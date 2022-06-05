@@ -34,8 +34,8 @@
     margin: 20px;
     width: 100px;
     height: 100px;
-    background-image: '../images/ewf.jpeg';
-    background-size: contain;
+    background-image: url('../images/ewf.jpeg') ;
+    background-size: cover;
     border-radius: 10px;
 }
 
@@ -153,14 +153,8 @@
     animation: pulse 2s linear infinite;
 }
 
-@keyframes pulse{
-    0%{
-        box-shadow: 0;
-    }
-    50%{
-        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
-    }
-    100%{
-        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+@media screen and (max-width:500px) {
+    .music-player{
+        display: none;
     }
 }

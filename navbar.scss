@@ -71,3 +71,49 @@
     margin-left: 20px;
     margin-right: 0px;
 }
+
+@media screen and (max-width:500px) {
+    .sidenav {
+        width: 100%;
+        height: 40px;
+        position: fixed;
+        top:0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: white;
+    }
+    .sidenav a {
+        margin-left: 0px;
+        max-width: 50px;
+    }
+    .sidenav img {
+        max-width: 10%;
+        margin-left: 0px;
+    }
+    .navLink{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+    
+    #navlink-img{
+        max-width: 40%;
+        margin-right: 20px;
+    }
+    
+    #navlink-img-top{
+        max-width: 40%;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .header button {
+        margin-bottom: 15px;
+    }
+}

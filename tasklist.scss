@@ -106,3 +106,16 @@ input[type=submit]{
     z-index: 5;
     pointer-events: all;
 }
+
+@media screen and (max-width:500px) {
+    .modal {
+        max-width: 60%;
+        margin: 40px 0px;
+    }
+    .modalBody{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 30px;
+    } 
+}

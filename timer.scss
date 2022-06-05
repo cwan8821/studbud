@@ -108,3 +108,10 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+@media screen and (max-width:500px) {
+    .timers-container {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+}
